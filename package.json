@@ -1,0 +1,14 @@
+{
+  "name": "backbronies",
+  "version": "0.0.1",
+  "description": "An example backbone app",
+  "dependencies": {
+    "express": "*",
+    "path": "*",
+    "mongoose": "*",
+    "nodemon": "*",
+    "body-parser": "*",
+    "method-override": "*",
+    "errorhandler": "*"
+  }
+}

@@ -1,0 +1,64 @@
+body {
+    background-color: purple;
+}
+
+.bronyContainer {
+    outline: 1px solid #aaa;
+    width: 1000px;
+    min-height: 260px;
+    background-color: pink;
+    margin: 0 auto;
+}
+
+.bronyContainer img {
+    float: left;
+    margin: 10px;
+    height: 240px;
+    width: 240px;
+}
+
+.bronyContainer ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    font-size: 2em;
+}
+
+.bronyContainer button {
+    float: right;
+    margin: 10px;
+}
+
+#addbrony label {
+    width: 100px;
+    margin-right: 10px;
+    text-align: right;
+    line-height: 25px;
+    color: lightpink;
+}
+
+
+#addbrony label[for="name"] {
+    clear: both;
+}
+
+#addbrony button {
+    display: block;
+    margin: 5px 20px 10px 10px;
+    float: right;
+    clear: both;
+}
+
+#addbrony div {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#addbrony div:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}
