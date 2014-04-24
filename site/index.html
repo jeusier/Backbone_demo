@@ -4,7 +4,39 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
+    <div id="bronies">
+        <form id="addBrony" action="#">
+            <div>
+                <label for="name">Name: </label>
+                    <input class="formdata" id="name" type="text">
+                <label for="favPony">Favorite Pony: </label>
+                    <input class="formdata" id="favPony" type="text">
+                <label for="favQuote">Favorite Quote: </label>
+                    <input class="formdata" id="favQuote" type="text">
+                <label for="avatar">Avatar: </label>
+                    <select class="formdata" name="avatar" id="avatar">
+                        <option value="img/twilight_sparkle.png">Twilight Sparkle</option>
+                        <option value="img/applejack.png">Applejack</option>
+                        <option value="img/fluttershy.png">Fluttershy</option>
+                        <option value="img/rarity.png">Rarity</option>
+                        <option value="img/pinkie_pie.png">Pinkie Pie</option>
+                        <option value="img/rainbow_dash.png">Rainbow Dash</option>
+                    </select>
+                <button id="add">Add</button>
+            </div>
+        </form>
+    </div>
 
+    <!-- template for displaying each brony -->
+    <script id="bronyTemplate" type="text/template">
+        <img src="<%= avatar %>">
+        <ul>
+            <li>Brony Name: <%= name %></li>
+            <li>Favorite My Little Pony: <%= favPony %></li>
+            <li>Favorite MLP Quote: <%= favQuote %></li>
+        </ul>
+        <button class="delete">Delete</button>
+    </script>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
