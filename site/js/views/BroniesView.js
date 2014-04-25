@@ -9,6 +9,8 @@ app.BroniesView = Backbone.View.extend({
     initialize: function( initialBronies ) {
         this.collection = new app.Bronies( initialBronies ),
         this.render();
+
+        this.listenTo( this.collection, 'add', this.renderBrony);
     },
 
     render: function() {
@@ -23,6 +25,24 @@ app.BroniesView = Backbone.View.extend({
         });
 
         this.$el.append( bronyView.render().el);
+    },
+
+    events: {
+        'click #add' : 'addBrony'
+    },
+
+    addBrony: function( e ) {
+        e.preventDefault();
+
+        var formData = {};
+
+        $( '#addBrony div' ).children(' .formdata ').each( function( i, el ) {
+            if( $(el).val() != '' ) {
+                formData[el.id] = $(el).val();
+            }
+        });
+
+        this.collection.add( new app.Brony( formData));
     }
 
 });
